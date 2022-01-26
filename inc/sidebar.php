@@ -1,5 +1,5 @@
     <!-- Main Sidebar Container -->
-    <aside class="main-sidebar sidebar-dark-primary elevation-4">
+    <aside class="main-sidebar sidebar-dark-primary elevation-4" style="background-color: #012026">
       <!-- Brand Logo -->
       <a href="index3.html" class="brand-link">
         <img src="assets/img/AdminLTELogo.png" alt="AdminLTE Logo" class="brand-image img-circle elevation-3" style="opacity: .8">
@@ -24,19 +24,19 @@
             
             <li class="nav-item">
               <a href="#" class="nav-link">
-              <i class="fas fa-child"></i>
+              <i class="fas fa-users"style="background: #00F777; font-size: 25px; color: black; padding: 5px; border-radius: 3px"></i>
                 <p> Crianças</p>
               </a>
             </li>
             <li class="nav-item">
               <a href="#" class="nav-link">
-              <i class="fas fa-users"></i>
+              <i class="fas fa-users" style="background: #00F777; font-size: 25px; color: black; padding: 5px; border-radius: 3px" ></i>
                 <p>Responsável</p>
               </a>
             </li>
             <li class="nav-item">
               <a href="#" class="nav-link">
-              <i class="fas fa-hand-holding-usd"></i>
+              <i class="fas fa-hand-holding-usd"style="background: #00F777; font-size: 25px; color: black; padding: 5px; border-radius: 3px"></i>
                 <p>Financeiro</p>
               </a>
             </li>

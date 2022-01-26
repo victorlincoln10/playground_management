@@ -22,7 +22,7 @@
   <!-- ./wrapper -->
 
   <!-- REQUIRED SCRIPTS -->
-
+<script src="assets/js/main.js"></script>
   <!-- jQuery -->
   <script src="lib/jquery/jquery.min.js"></script>
   <!-- Bootstrap 4 -->
@@ -34,6 +34,7 @@
 <script src="lib/datatables-bs4/js/dataTables.bootstrap4.min.js"></script>
 <script src="lib/datatables-responsive/js/dataTables.responsive.min.js"></script>
 <script src="lib/datatables-responsive/js/responsive.bootstrap4.min.js"></script>
+
 
   <script>
   $(function () {
@@ -55,6 +56,7 @@
       "autoWidth": false,
     });
   });
+
     </script>
 </body>
 

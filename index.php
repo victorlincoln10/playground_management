@@ -17,7 +17,6 @@ require_once "inc/header.php";
     ?>
     <!-- Content Wrapper. Contains page content -->
     <div class="content-wrapper">
-        <?php require_once("inc/page-header.php"); ?>
 
         <!-- Main content -->
         <div class="content">
@@ -26,7 +25,8 @@ require_once "inc/header.php";
                     <div class="col-12">
                         <div class="card">
                             <div class="card-header">
-                                <h3 class="card-title">Crianças Cadastrados</h3>
+                                <h3 class="card-title pt-3">administradores cadastrados</h3>
+                                <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#cadastroModal">Cadastrar admin</button>
                             </div>
                             <!-- /.card-header -->
                             <div class="card-body">
@@ -80,3 +80,55 @@ require_once "inc/header.php";
     </div>
     <!-- /.content-wrapper -->
     <?php require_once("inc/footer.php") ?>
+
+          <!--MODAL AQUI-->
+    <div class="modal fade" id="cadastroModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Realize seu cadastro.</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+            <div class="modal-body">
+               
+            <!--FORMULARIO DE CADASTRO MODAL-->
+            <form action="./create-admin.php" method="POST"> 
+                <div class="form-row mt-3">
+                    <div class="col">
+                        <input type="text" class="form-control" placeholder="Nome" name="nome">
+                    </div>
+                </div>
+
+                <div class="form-row mt-3">
+                    <div class="col">
+                        <input type="text" class="form-control" placeholder="Login" name="login">
+                    </div>
+                    <div class="col">
+                        <input type="password" class="form-control" placeholder="Senha" name="senha">
+                    </div>
+                </div>
+
+                <div class="form-row mt-3">
+                    <div class="col">
+                        <input type="text" class="form-control" placeholder="Email" name="email">
+                    </div>
+                    <div class="col">
+                        <input type="text" class="form-control" placeholder="Cpf" name="cpf">
+                    </div>
+                    <div class="col">
+                        <input type="number" class="form-control" placeholder="Contato" name="celular">
+                    </div>
+                </div>
+
+                </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-dark" data-dismiss="modal">Close</button>
+                        <button type="submit" class="btn btn-success">Salvar</button>
+                    </div>
+                </div>
+            </form> <!--end FORM-->
+        </div>
+    </div>
+<!--FIM MODAL AQUI-->

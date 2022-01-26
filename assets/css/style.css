@@ -1,0 +1,37 @@
+.content-wrapper .btn {
+   background: #00F777;
+   color: #012026;
+   border: none;
+    margin: 0.7rem 0px 10px 1rem;
+    float: right;
+    padding: 10px auto;
+ }
+ .content-wrapper .btn:hover {
+     background-color: #012026;
+     color: white;
+     transition: 0.5s;
+ }
+.content-header {
+    background-color: #012026;
+}
+.content-header .container-fluid h1 {
+    color: white;
+}
+.content-header .breadcrumb-item a {
+    color: #00F777;
+}
+
+/*
+#00F777  BOTOES
+#012026  BACKGROUND
+#000000  BACKGROUND
+#01543A  PARALELOS   
+*/
+.modal .modal-footer .btn-success {
+    background: #00F777;
+    color: #012026;
+    border: none;
+     margin: 0.7rem 0px 10px 1rem;
+     float: right;
+     padding: 10px auto;
+  }
