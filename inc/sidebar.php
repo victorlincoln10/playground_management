@@ -14,7 +14,7 @@
             <img src="assets/img/user2-160x160.jpg" class="img-circle elevation-2" alt="User Image">
           </div>
           <div class="info">
-            <a href="#" class="d-block">admin</a>
+            <a href="./index.php" class="d-block">admin</a>
           </div>
         </div>
 
@@ -23,7 +23,7 @@
           <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
             
             <li class="nav-item">
-              <a href="#" class="nav-link">
+              <a href="./clientes.php" class="nav-link">
               <i class="fas fa-users"style="background: #00F777; font-size: 25px; color: black; padding: 5px; border-radius: 3px"></i>
                 <p> Crianças</p>
               </a>

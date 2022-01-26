@@ -1,24 +1,24 @@
 <?php
 //$conn não é mais uma variável, agora é um objeto.
-//$conn = new PDO("mysql:host=localhost;dbname=fiap_db", "fiap", "fiap");
+//$conn = new PDO("mysql:host=localhost;dbname=db_park", "root", "");
 require_once "inc/conn.inc.php";
 //$id = addslashes($_GET["id"]);
 $id = 2;
-$stmt = $conn->prepare("update tb_events set title=:title, local_event=:local_event,start_at=:start_at, end_at=:end_at, site=:site where id=:id");
+$stmt = $conn->prepare("update tb_admin set login=:login, senha=:senha,nome=:nome, email=:email, cpf=:cpf, celular=:celular where id_admin=:id_admin");
 
+$login = $_POST['login'];
+$senha = $_POST['senha'];
+$nome = $_POST['nome'];
+$email = $_POST['email'];
+$cpf = $_POST['cpf'];
+$celular = $_POST['celular'];
 
-$title = "Fiap Summit 2021";
-$local_event = "Unidade Lins";
-$start_at = "2021-10-27 19:30";
-$end_at = "2021-10-27 21:30";
-$site = "https://www.fiap.com.br";
-
-$stmt->bindParam(":title", $title);
-$stmt->bindParam(":local_event", $local_event);
-$stmt->bindParam(":start_at", $start_at);
-$stmt->bindParam(":end_at", $end_at);
-$stmt->bindParam(":site", $site);
-$stmt->bindParam(":id", $id);
+$stmt->bindParam(":login", $login);
+$stmt->bindParam(":senha", $senha);
+$stmt->bindParam(":nome", $nome);
+$stmt->bindParam(":email", $email);
+$stmt->bindParam(":cpf", $cpf);
+$stmt->bindParam(":celular", $celular);
 
 if ($stmt->execute()) {
     echo "Dados alterados com sucesso!";

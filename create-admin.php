@@ -3,7 +3,7 @@
 //$conn = new PDO("mysql:host=localhost;dbname=fiap_db", "root", "");
 require_once "inc/conn.inc.php";
 
-$stmt = $conn->prepare("insert into tb_admin(login, senha, nome, email, cpf, celular) values (:login, :senha, :nome, :email, :cpf, :celular)");
+$stmt = $conn->prepare("INSERT INTO tb_admin(login, senha, nome, email, cpf, celular) VALUES (:login, :senha, :nome, :email, :cpf, :celular)");
 
 
 $login = $_POST['login'];
@@ -21,15 +21,19 @@ $stmt->bindParam(":email", $email);
 $stmt->bindParam(":cpf", $cpf);
 $stmt->bindParam(":celular", $celular);
 
+$results = $stmt->execute();
 
-if ($stmt->execute()) {
-    echo "Dados cadastrados com sucesso!";
+if ($results > 0) {
+    "<script> 
+    alert('Admin cadastrado com sucesso!')
+    </script>";
     header("Location: ./index.php");
-    exit;
 } else {
-    echo "<script> 
+    echo 
+    "<script> 
         alert('Inválido!')
     </script>";
+    header("Location: ./index.php");
 
 }
 
