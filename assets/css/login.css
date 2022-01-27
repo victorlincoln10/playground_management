@@ -1,0 +1,140 @@
+body {
+    margin: 0%;
+}
+
+.main-login {
+    width: 100vw;
+    height: 100vh;
+    background: #012026;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.left-login {
+    width: 50vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.left-login>h1 {
+    font-size: 35pt;
+    margin-top: 100px;
+    color: #00f777
+}
+
+.left-login-image {
+    width: 39vw;
+    height: 100vh;
+    margin-left: 22em;
+}
+
+.right-login {
+    width: 50vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card-login {
+    width: 35%;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 30px 35px;
+    background: #000000b7;
+    border-radius: 35px;
+    box-shadow: 0px 5px 40px #00f77785;
+    margin-left: 25em;
+}
+
+.card-login>h1 {
+    color: #00f777;
+    font-weight: 300;
+    font-size: 12pt;
+    margin: 50px;
+}
+
+.card-login>img {
+    width: 90%;
+    height: 10%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card-login>a {
+    color: #00f777;
+    font-weight: 300;
+    font-size: 12pt;
+    margin: 0x;
+}
+
+.forget-key {
+    color: #00f777;
+}
+
+.textfield {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 10px 0px;
+}
+
+.textfield>input {
+    width: 100%;
+    border: none;
+    border-radius: 10px;
+    padding: 15px;
+    background: #00f777;
+    color: #000000;
+    font-size: 12pt;
+    box-shadow: 0px 10px 45px #000000;
+    outline: none;
+    box-sizing: border-box;
+}
+
+.textfield>label {
+    color: #00f777;
+    margin-bottom: 10px;
+}
+
+.textfield>input::placeholder {
+    color: #012026;
+}
+
+.btn-login {
+    width: 100%;
+    padding: 15px 0px;
+    margin: 0px;
+    border-radius: 10px;
+    outline: none;
+    text-transform: uppercase;
+    font-weight: 650;
+    letter-spacing: 2px;
+    color: #00f777;
+    background: #012026;
+    cursor: pointer;
+    box-shadow: 0px 10px 40px -12px #000000;
+}
+
+@media only screen and (max-width: 950px) {
+    .card-login {
+        width: 85%
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .main-login {
+        flex-direction: column;
+    }
+    .left-login>h1 {
+        display: none;
+    }
+}

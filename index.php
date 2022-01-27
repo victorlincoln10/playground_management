@@ -1,5 +1,15 @@
 <?php
+session_start();
+ob_start();
 require_once "inc/conn.inc.php";
+
+
+if((!isset($_SESSION['id_admin'])) AND (!isset($_SESSION['nome']))){
+    $_SESSION['msg'] = "<p style='color: #ff0000'>Erro: Necessário realizar o login para acessar a página!</p>";
+   
+}
+
+
 
 //$filter = " where title like '%:title%' ";
 
