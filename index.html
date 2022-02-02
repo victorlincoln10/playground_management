@@ -20,26 +20,30 @@
                 <img src="./assets/img/mp_logo.png">
                 <h1>Entre com suas credenciais</h1>
                 <!--formulario-->
-                <form action="">
+                <form action="usuario.php" method="POST" class="formulario">
 
                     <!--fim formulario-->
                     <div class="textfield">
                         <label for="usuario"></label>
-                        <input type="text" nome="usuario" placeholder="Usuário">
+                        <input type="text" name="login"   placeholder="Usuário">
                     </div>
                     <div class="textfield">
                         <label for="senha"></label>
-                        <input type="password" nome="senha" placeholder="Senha">
+                        <input type="password" name="senha" placeholder="Senha">
                     </div>
-                    <button class="btn-login">Entrar</button>
+                    <button class="btn-login" type="submit">Entrar</button>
                     <a class="forget-key" href="#">Esqueci minha senha</a>
             </div>
             </form>
 
         </div>
 
+
+        
         <div>
             <!--end main-->
+        
+            <script src="./assets/js/main.js"></script>
 
 </body>
 

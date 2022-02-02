@@ -26,7 +26,7 @@ require_once "inc/header.php";
                         <div class="card">
                             <div class="card-header">
                                 <h3 class="card-title pt-3">Crianças cadastrados</h3>
-                                <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#cadastroModal">Cadastrar Criança</button>
+                                <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#clienteModal">Cadastrar Criança</button>
                             </div>
                             <!-- /.card-header -->
                             <div class="card-body">
@@ -81,7 +81,7 @@ require_once "inc/header.php";
     <?php require_once("inc/footer.php") ?>
 
           <!--MODAL AQUI-->
-    <div class="modal fade" id="cadastroModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel1" aria-hidden="true">
+    <div class="modal fade" id="clienteModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel1" aria-hidden="true">
         <div class="modal-dialog" role="document">
             <div class="modal-content">
                 <div class="modal-header">
@@ -93,32 +93,33 @@ require_once "inc/header.php";
             <div class="modal-body">
                
             <!--FORMULARIO DE CADASTRO MODAL-->
-            <form action="./create-admin.php" method="POST"> 
+            <form action="./create.php" method="POST"> 
                 <div class="form-row mt-3">
                     <div class="col">
-                        <input type="text" class="form-control" placeholder="Nome" name="nome">
+                        <input type="text" class="form-control" placeholder="Nome" name="nome_crianca">
+                    </div>
+                    <div class="col">
+                        <input type="text" class="form-control" placeholder="Contato" name="contato_crianca">
                     </div>
                 </div>
 
                 <div class="form-row mt-3">
                     <div class="col">
-                        <input type="text" class="form-control" placeholder="Login" name="login">
+                        <input type="text" class="form-control" placeholder="Idade" name="idade_crianca">
                     </div>
                     <div class="col">
-                        <input type="password" class="form-control" placeholder="Senha" name="senha">
+                        <input type="text" class="form-control" placeholder="Sexo" name="sexo_crianca">
                     </div>
                 </div>
 
                 <div class="form-row mt-3">
                     <div class="col">
-                        <input type="text" class="form-control" placeholder="Email" name="email">
+                        <input type="number" class="form-control" placeholder="Tempo" name="tempo">
                     </div>
                     <div class="col">
-                        <input type="text" class="form-control" placeholder="Cpf" name="cpf">
+                        <input type="text" class="form-control" placeholder="nome do responsável" name="nome_responsavel">
                     </div>
-                    <div class="col">
-                        <input type="number" class="form-control" placeholder="Contato" name="celular">
-                    </div>
+                   
                 </div>
 
                 </div>

@@ -27,3 +27,8 @@ function myModal() {
     console.log(modal);
 }
 myModal();
+
+alert('oi');
+
+
+  

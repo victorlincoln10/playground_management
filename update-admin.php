@@ -6,6 +6,8 @@ require_once "inc/conn.inc.php";
 $id = 2;
 $stmt = $conn->prepare("update tb_admin set login=:login, senha=:senha,nome=:nome, email=:email, cpf=:cpf, celular=:celular where id_admin=:id_admin");
 
+
+
 $login = $_POST['login'];
 $senha = $_POST['senha'];
 $nome = $_POST['nome'];

@@ -13,7 +13,7 @@ if((!isset($_SESSION['id_admin'])) AND (!isset($_SESSION['nome']))){
 
 //$filter = " where title like '%:title%' ";
 
-$stmt = $conn->prepare("SELECT id_admin, login, senha, nome, email, cpf, celular, data FROM tb_admin limit 10");
+$stmt = $conn->prepare("SELECT id_responsavel, nome_responsavel, cpf_responsavel, rg_responsavel, endereco_responsavel, data FROM tb_responsavel limit 10");
 $stmt->execute();
 
 $results = $stmt->fetchAll(PDO::FETCH_ASSOC);
@@ -35,8 +35,8 @@ require_once "inc/header.php";
                     <div class="col-12">
                         <div class="card">
                             <div class="card-header">
-                                <h3 class="card-title pt-3">administradores cadastrados</h3>
-                                <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#cadastroModal">Cadastrar admin</button>
+                                <h3 class="card-title pt-3">Responsável cadastrados</h3>
+                                <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#responsavelModal">Cadastrar responsável</button>
                             </div>
                             <!-- /.card-header -->
                             <div class="card-body">
@@ -47,12 +47,10 @@ require_once "inc/header.php";
                                     <thead>
                                         <tr>
                                             <th>ID</th>
-                                            <th>Login</th>
-                                            <th>Senha</th>
                                             <th>Nome</th>
-                                            <th>Email</th>
                                             <th>CPF</th>
-                                            <th>Celular</th>
+                                            <th>RG</th>
+                                            <th>endereco</th>
                                             <th>Data</th>
                                         </tr>
                                     </thead>
@@ -92,7 +90,7 @@ require_once "inc/header.php";
     <?php require_once("inc/footer.php") ?>
 
           <!--MODAL AQUI-->
-    <div class="modal fade" id="cadastroModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal fade" id="responsavelModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog" role="document">
             <div class="modal-content">
                 <div class="modal-header">
@@ -107,28 +105,22 @@ require_once "inc/header.php";
             <form action="./create.php" method="POST"> 
                 <div class="form-row mt-3">
                     <div class="col">
-                        <input type="text" class="form-control" placeholder="Nome" name="nome">
+                        <input type="text" class="form-control" placeholder="Nome" name="nome_responsavel">
                     </div>
                 </div>
 
                 <div class="form-row mt-3">
                     <div class="col">
-                        <input type="text" class="form-control" placeholder="Login" name="login">
+                        <input type="number" class="form-control" placeholder="CPF" name="cpf_responsavel">
                     </div>
                     <div class="col">
-                        <input type="password" class="form-control" placeholder="Senha" name="senha">
+                        <input type="number" class="form-control" placeholder="RG" name="rg_responsavel">
                     </div>
                 </div>
 
                 <div class="form-row mt-3">
                     <div class="col">
-                        <input type="text" class="form-control" placeholder="Email" name="email">
-                    </div>
-                    <div class="col">
-                        <input type="text" class="form-control" placeholder="Cpf" name="cpf">
-                    </div>
-                    <div class="col">
-                        <input type="number" class="form-control" placeholder="Contato" name="celular">
+                        <input type="text" class="form-control" placeholder="Endereço" name="endereco_responsavel">
                     </div>
                 </div>
 
