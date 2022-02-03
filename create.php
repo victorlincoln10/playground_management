@@ -29,14 +29,14 @@ if ($results > 0) {
     "<script> 
     alert('Admin cadastrado com sucesso!')
     </script>";
-    header("Location: ./index.php");
+    header("Location: ./admin.php");
     exit;
 } else {
     echo 
     "<script> 
         alert('Inválido!')
     </script>";
-    header("Location: ./index.php");
+    header("Location: ./admin.php");
 
 }
 

@@ -18,6 +18,7 @@
 
   <link rel="stylesheet" href="assets/css/adminlte.css">
   <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/login.css">
  
   <!-- DataTables -->
   <link rel="stylesheet" href="lib/datatables-bs4/css/dataTables.bootstrap4.min.css">

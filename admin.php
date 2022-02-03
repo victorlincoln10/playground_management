@@ -59,7 +59,7 @@ require_once "inc/header.php";
                                     <tbody>
                                         <?php
                                         if (!$results) {
-                                            echo "<tr><td colspan='5'>Nenhum registro encontrado!</td></tr></tdoby></tbody></table>";
+                                            echo "<tr><td>Nenhum registro encontrado!</td></tr></tdoby></tbody></table>";
                                             exit();
                                         }
                                         ?>
@@ -73,6 +73,9 @@ require_once "inc/header.php";
                                                     echo "<td>" . $value . "</td>";
                                                 }
                                             }
+                                            echo "<td> <a href='#' class='badge badge-success'><i class='fa fa-edit'></i>Editar</a> </td>"; ?>
+                                            <?php echo ' <td> <a href="delete.php?id_admin=' . $row['id_admin'] . '" class="badge badge-danger"><i class="fa fa-trash"></i> Apagar</a> </td>'; 
+                                             
                                             echo "</tr>";
                                         }
                                         ?>

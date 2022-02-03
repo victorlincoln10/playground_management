@@ -67,10 +67,12 @@ require_once "inc/header.php";
                                         foreach ($results as $row) {
                                             echo "<tr>";
                                             foreach ($row as $key => $value) {
-                                                if ($key != "id") {
+                                                if ($key != "id_responsavel") {
                                                     echo "<td>" . $value . "</td>";
                                                 }
                                             }
+                                            echo "<td> <a href='#' class='badge badge-success'><i class='fa fa-edit'></i>Editar</a> </td>"; ?>
+                                            <?php echo ' <td> <a href="delete.php?id_responsavel=' . $row['id_responsavel'] . '" class="badge badge-danger"><i class="fa fa-trash"></i> Apagar</a> </td>'; 
                                             echo "</tr>";
                                         }
                                         ?>

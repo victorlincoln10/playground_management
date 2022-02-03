@@ -41,6 +41,7 @@ require_once "inc/header.php";
                                             <th>Contato</th>
                                             <th>Sexo</th>
                                             <th>Tempo</th>
+                                            <th>Idade</th>
                                             <th>nome responsável</th>
                                             <th>Data</th>
                                         </tr>
@@ -58,10 +59,13 @@ require_once "inc/header.php";
                                         foreach ($results as $row) {
                                             echo "<tr>";
                                             foreach ($row as $key => $value) {
-                                                if ($key != "id") {
+                                                if ($key != "id_crianca") {
                                                     echo "<td>" . $value . "</td>";
-                                                }
+                                                    
+                                                }  
                                             }
+                                            echo "<td> <a href='#' class='badge badge-success'><i class='fa fa-edit'></i>Editar</a> </td>"; ?>
+                                            <?php echo ' <td> <a href="delete.php?id_crianca=' . $row['id_crianca'] . '" class="badge badge-danger"><i class="fa fa-trash"></i> Apagar</a> </td>'; 
                                             echo "</tr>";
                                         }
                                         ?>

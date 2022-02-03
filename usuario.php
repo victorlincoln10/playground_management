@@ -25,12 +25,12 @@ require_once 'inc/conn.inc.php';
             
             $_SESSION['loginSession'] = $_POST['login'];
             
-            header("location: index.php");
+            header("location: admin.php");
         }
 
     } else {
         return false;
-        header("location: index.html");
+        header("location: admin.html");
     }
 
 
